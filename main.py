@@ -226,10 +226,8 @@ def snd_welcome ( message ) :
         r = requests.get ( url ).text
         x = str ( message.chat.id )
         if x in li :
-            if "Aprovadas" in r :
-                bot.reply_to ( message , r )
-            else:
-                bot.reply_to ( message , r )
+            bot.reply_to ( message ,str(r))
+                
         else :
              y = "contact @N2k4n for allwed you"
              bot.reply_to ( message , y )
