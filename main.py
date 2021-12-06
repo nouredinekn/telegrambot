@@ -214,7 +214,7 @@ def snd_welcome ( message ) :
 def snd_welcome ( message ) :
     yy = message.text
     cc1 = yy.split ( '/exp' )[1]
-    res = "^[A-Za-z0-9]"
+    res = "^[\s]+[A-Za-z0-9]"
     tt = re.match ( res , cc1 )
     if tt == None :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
