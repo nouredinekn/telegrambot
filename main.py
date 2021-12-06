@@ -6,7 +6,7 @@ import requests
 
 tk = "5091216962:AAFH8KuDUek9SJ04LHz8d_r0cOdFrfgWL6o"
 bot = telebot.TeleBot ( tk , parse_mode='HTML' )
-li = ['1935904246' , '2019913786','-1001264846206','1369203062']
+li = ['1935904246' , '2019913786','-1001264846206','1369203062','1904810925','1220994613']
 
 
 @bot.message_handler ( commands=['start' , 'help'] )
@@ -183,7 +183,7 @@ def snd_welcome ( message ) :
     else :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
 𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
-/cc  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
+/stg  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
 
 
 @bot.message_handler ( commands=['sk'] )
@@ -214,13 +214,13 @@ def snd_welcome ( message ) :
 def snd_welcome ( message ) :
     yy = message.text
     cc1 = yy.split ( '/exp' )[1]
-    sk = cc1.split ( ' ' )[1]
-    url = 'https://indianbinner.in/api/ExpVpn.php?lista=' + sk
+    sk = str(cc1.split ( ' ' )[1])
+    url = 'https://indianbinner.in/api/ExpVpn.php?lista='+sk
     r = requests.get ( url ).text
     x = str ( message.chat.id )
     if x in li :
         if "Aprovadas" in r :
-            bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+            bot.reply_to ( message , sk+'\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else:
             bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
     else:
