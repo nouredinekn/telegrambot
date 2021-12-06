@@ -227,9 +227,9 @@ def snd_welcome ( message ) :
         x = str ( message.chat.id )
         if x in li :
             if "Aprovadas" in r :
-                bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+                bot.reply_to ( message , r )
             else:
-                bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+                bot.reply_to ( message , r )
         else :
              y = "contact @N2k4n for allwed you"
              bot.reply_to ( message , y )
