@@ -4,7 +4,7 @@ from datetime import time , date , datetime
 import time
 import requests
 
-tk = "5015737423:AAEoKl3GJqE-eds1KtjUzI8hIPBEjYFiA_g"
+tk = "5091216962:AAFH8KuDUek9SJ04LHz8d_r0cOdFrfgWL6o"
 bot = telebot.TeleBot ( tk , parse_mode='HTML' )
 li = ['1935904246' , '2019913786','-1001264846206','1369203062']
 
@@ -21,6 +21,7 @@ def send_welcome ( message ) :
 	/cc  -------> 𝙂𝙀𝙏 1   <b>Ｓｔｒｉｐ　Ａｕｔｈ </b>
 	/stg -------> 𝙂𝙀𝙏 2 <b>Ｓｔｒｉｐ Ｃｈａｒｇｅ １＄</b>
 	/bin -------> 𝘾𝙃𝙀𝘼𝙆 𝘽𝙄𝙉
+	/exp -------> 𝘾𝙃𝙀𝘼𝙆 𝙠𝙚𝙮 �𝙭𝙥𝙑𝙥𝙣
 	/id  -------> 𝙂𝙀𝙏 𝙔𝙊𝙐𝙍 𝙄𝘿
 	𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣""" )
 
@@ -204,6 +205,30 @@ def snd_welcome ( message ) :
         if x in li :
             if "Live" in r :
                 bot.reply_to ( message , sk + '\n<b>LIVE ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+	    else:
+		bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+        else :
+             y = "contact @N2k4n for allwed you"
+             bot.reply_to ( message , y )
+@bot.message_handler ( commands=['exp'] )
+def snd_welcome ( message ) :
+    yy = message.text
+    cc1 = yy.split ( '/exp' )[1]
+    res = "^[A-Za-z0-9]"
+    tt = re.match ( res , cc1 )
+    if tt == None :
+        bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
+𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
+/exp[A-Z]******** ''' )
+
+    else :
+        sk = cc1.split ( ' ' )[1]
+        url = 'https://indianbinner.in/api/ExpVpn.php?lista=' + sk
+        r = requests.get ( url ).text
+        x = str ( message.chat.id )
+        if x in li :
+            if "Aprovadas" in r :
+                bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
 	    else:
 		bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else :
