@@ -6,7 +6,7 @@ import requests
 
 tk = "5015737423:AAEoKl3GJqE-eds1KtjUzI8hIPBEjYFiA_g"
 bot = telebot.TeleBot ( tk , parse_mode='HTML' )
-li = ['1935904246' , '2019913786','-1001264846206']
+li = ['1935904246' , '2019913786','-1001264846206','1369203062']
 
 
 @bot.message_handler ( commands=['start' , 'help'] )
