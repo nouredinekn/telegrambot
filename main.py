@@ -214,23 +214,18 @@ def snd_welcome ( message ) :
 def snd_welcome ( message ) :
     yy = message.text
     cc1 = yy.split ( '/exp' )[1]
-    res = "^[\s]+[A-Za-z0-9]"
-    tt = re.match ( res , cc1 )
-    if tt == None :
-        bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
-𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
-/exp[A-Z]******** ''' )
-    else :
-        sk = cc1.split ( ' ' )[1]
-        url = 'https://indianbinner.in/api/ExpVpn.php?lista=' + sk
-        r = requests.get ( url ).text
-        x = str ( message.chat.id )
-        if x in li :
-            bot.reply_to ( message ,str(r))
-                
-        else :
-             y = "contact @N2k4n for allwed you"
-             bot.reply_to ( message , y )
+    sk = cc1.split ( ' ' )[1]
+    url = 'https://indianbinner.in/api/ExpVpn.php?lista=' + sk
+    r = requests.get ( url ).text
+    x = str ( message.chat.id )
+    if x in li :
+        if "Aprovadas" in r :
+            bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+        else:
+            bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+     else :
+         y = "contact @N2k4n for allwed you"
+         bot.reply_to ( message , y )
 
 
 bot.infinity_polling ()
