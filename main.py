@@ -205,8 +205,8 @@ def snd_welcome ( message ) :
         if x in li :
             if "Live" in r :
                 bot.reply_to ( message , sk + '\n<b>LIVE ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
-	    else:
-		bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+            else:
+                bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else :
              y = "contact @N2k4n for allwed you"
              bot.reply_to ( message , y )
@@ -220,7 +220,6 @@ def snd_welcome ( message ) :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
 𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
 /exp[A-Z]******** ''' )
-
     else :
         sk = cc1.split ( ' ' )[1]
         url = 'https://indianbinner.in/api/ExpVpn.php?lista=' + sk
@@ -229,8 +228,8 @@ def snd_welcome ( message ) :
         if x in li :
             if "Aprovadas" in r :
                 bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
-	    else:
-		bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+            else:
+                bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else :
              y = "contact @N2k4n for allwed you"
              bot.reply_to ( message , y )
