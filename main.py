@@ -203,9 +203,9 @@ def snd_welcome ( message ) :
         x = str ( message.chat.id )
         if x in li :
             if "Live" in r :
-                bot.reply_to ( message , sk + '<b>LIVE ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+                bot.reply_to ( message , sk + '\n<b>LIVE ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else :
-            bot.reply_to ( message , sk + '<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
+            bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
 
 
 bot.infinity_polling ()
