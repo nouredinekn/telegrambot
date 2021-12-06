@@ -4,7 +4,7 @@ from datetime import time , date , datetime
 import time
 import requests
 
-tk = "2038050569:AAHoZECu6IgmNDhBO7zF0_PdhKNr_vV_sJU"
+tk = "5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8"
 bot = telebot.TeleBot ( tk , parse_mode='HTML' )
 li = ['1935904246' , '2019913786']
 
