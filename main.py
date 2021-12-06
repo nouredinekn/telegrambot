@@ -223,9 +223,9 @@ def snd_welcome ( message ) :
             bot.reply_to ( message , sk + '\n<b>Aprovadas ✅</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
         else:
             bot.reply_to ( message , sk + '\n<b>DEAD ❌</b>\n 𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣' )
-     else:
-         y = "contact @N2k4n for allwed you"
-         bot.reply_to ( message , y )
+    else:
+        y = "contact @N2k4n for allwed you"
+        bot.reply_to ( message , y )
 
 
 bot.infinity_polling ()
