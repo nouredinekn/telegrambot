@@ -243,7 +243,7 @@ def snd_welcome ( message ) :
                 '","' )[0]
             shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
             tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
-            lvel = '|- 𝙇𝙀𝙑𝙀𝙇:t' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
+            lvel = '|- 𝙇𝙀𝙑𝙀𝙇: ' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
             cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' + \
                    r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
@@ -283,7 +283,7 @@ def snd_welcome ( message ) :
                         us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                             message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
-                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip 3$</b>' + '\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' 
                         status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
                         msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + lvel + cont + us + date + auther
                         bot.reply_to ( message , msg )
