@@ -172,6 +172,19 @@ def snd_welcome ( message ) :
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
+			if 'insufficient_funds' in rr:
+				us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+				message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+				rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>✅\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
+				msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
+				bot.reply_to ( message , msg )
+			else:
+				us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+				message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+				rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
+				msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
+				bot.reply_to ( message , msg )
+
                 elif 'Request rate limit exceeded.' or 'rate_limit' :
                     bot.reply_to ( message , "CHEAK YOUR PROXY ---/ Retry " )
                 else :
