@@ -264,7 +264,7 @@ def snd_welcome ( message ) :
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
             x = str ( message.chat.id )
             if x in li :
-                url2 = 'https://api.stripe.com/v1/payment_intents/pi_3K3nzkFgrf8fsEG40o8bSvRJ/confirm'
+                url2 = 'https://api.stripe.com/v1/payment_intents/pi_3K6HFeHl6cVlrJKr1Xg9iDqz/confirm'
                 data = {
                     'payment_method_data[type]' : 'card' ,
                     'payment_method_data[billing_details][name]' : 'Nihf kn' ,
@@ -281,8 +281,8 @@ def snd_welcome ( message ) :
                     'use_stripe_sdk' : 'true' ,
                     'webauthn_uvpa_available' : 'false' ,
                     'spc_eligible' : 'false' ,
-                    'key' : 'pk_live_51DJpRVFgrf8fsEG4rtqF6ifpKNLShxgXcQb8qeHFa9MkVw2LByShB4k4xeoKeBFLQ9FiIsFpAabZxUf9zqCD8VEs00hqtoFyUg' ,
-                    'client_secret' : 'pi_3K3nzkFgrf8fsEG40o8bSvRJ_secret_coKVEZEgejvjV3tUFe5V1uLLd' ,
+                    'key' : 'pk_live_WGPbgfMspKkssN3TCXlbtQbF' ,
+                    'client_secret' : 'pi_3K6HFeHl6cVlrJKr1Xg9iDqz_secret_cCge71wK0Ht5ykXuUTS1BA0x0' ,
                 }
                 headers = {
                     'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36' ,
@@ -358,7 +358,7 @@ def snd_welcome ( message ) :
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
             x = str ( message.chat.id )
             if x in li :
-                url2='https://api.stripe.com/v1/payment_intents/pi_3K4BVIFgrf8fsEG41PhigMIt/confirm'
+                url2='https://api.stripe.com/v1/payment_intents/pi_3K6HFeHl6cVlrJKr1Xg9iDqz/confirm'
                 data={
     'payment_method_data[type]':'card',
     'payment_method_data[billing_details][name]':'Nihf kn',
@@ -375,8 +375,8 @@ def snd_welcome ( message ) :
     'use_stripe_sdk': 'true',
     'webauthn_uvpa_available': 'false',
     'spc_eligible': 'false',
-    'key': 'pk_live_51DJpRVFgrf8fsEG4rtqF6ifpKNLShxgXcQb8qeHFa9MkVw2LByShB4k4xeoKeBFLQ9FiIsFpAabZxUf9zqCD8VEs00hqtoFyUg',
-    'client_secret': 'pi_3K4BVIFgrf8fsEG41PhigMIt_secret_lvtI6OojQdWulUTARfB63sdcA',
+    'key' : 'pk_live_WGPbgfMspKkssN3TCXlbtQbF' ,
+    'client_secret' : 'pi_3K6HFeHl6cVlrJKr1Xg9iDqz_secret_cCge71wK0Ht5ykXuUTS1BA0x0' ,
 }
                 headers={
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36',
