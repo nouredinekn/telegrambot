@@ -353,7 +353,7 @@ def snd_welcome ( message ) :
                 '","' )[0]
             shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
             tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
-            #lvel = '|- 𝙇𝙀𝙑𝙀𝙇:t' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
+            lvel = '|- 𝙇𝙀𝙑𝙀𝙇:' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
             cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' + \
                    r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
