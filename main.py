@@ -354,8 +354,7 @@ def snd_welcome ( message ) :
             shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
             tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
             lvel = '|- 𝙇𝙀𝙑𝙀𝙇:' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
-            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' + \
-                   r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
+            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' +r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
             x = str ( message.chat.id )
