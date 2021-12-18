@@ -105,7 +105,7 @@ def snd_welcome ( message ) :
 /bin  BIN ''' )
 
     else :
-        cc = cc1.split ( ' ' )[1]
+        cc = cc1.split (' ' )[1]
         now = datetime.now ()
         url = f'https://lookup.binlist.net/{cc}'
         r = requests.get ( url ).text
@@ -113,14 +113,12 @@ def snd_welcome ( message ) :
             '","' )[0]
         shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚:\t' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
         tp = '|- 𝙏𝙔𝙋𝙀:\t' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
-        lvel = '<i>|- 𝙇𝙀𝙑𝙀𝙇:\t' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
         cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔:\t' + r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[
             0] + '\t' + img + '\n'
-        bank = '|- 𝘽𝘼𝙉𝙆:\t' + r.split ( ',"bank":{"name":"' )[1].split ( '","' )[0] + '\n'
         date = '|-𝘿𝘼𝙏𝙀:\t' + str ( now ) + '\n'
         auther = '𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣'
-        msg = '|-𝘽I𝙉 :\t' + cc[0] + cc[1] + cc[2] + cc[3] + cc[4] + cc[5] + cc[
-            6] + '\n' + shm + tp + lvel + cont + bank + date + auther
+        msg = '|-𝘽I𝙉 :\t<b>' + cc[0] + cc[1] + cc[2] + cc[3] + cc[4] + cc[5] + cc[
+            6] + '</b>✅\n' + shm + tp + cont  + date + auther
         bot.reply_to ( message , msg )
 
 
