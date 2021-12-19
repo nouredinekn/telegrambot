@@ -297,8 +297,6 @@ def snd_welcome ( message ) :
                 bot.reply_to ( message , "-----please W8 ----- " )
                 rr = requests.post(url2,data=data,headers=headers)
                 get=rr.text
-                msge=get.split('"message": "')[1].split('",')[0]
-                code=get.split('code": "')[1].split('",')[0]
                 if 'declined' or 'bank_account_declined' or 'bank_account_exists' or 'bank_account_unusable' or 'card_decline_rate_limit_exceeded'or 'card_declined' or 'charge_already_captured' or 'charge_already_refunded'or 'expired_card' or 'incorrect_cvc' or 'incorrect_number' or 'invalid_expiry_month' or 'invalid_expiry_year' or 'invalid_number' or 'lock_timeout' or 'parameter_missing' or 'payment_method_bank_account_already_verified' or 'payment_method_bank_account_blocked' or 'payment_method_invalid_parameter' or 'payment_method_unsupported_type' in get:
                     msge=get.split('"message": "')[1].split('",')[0]
                     code=get.split('code": "')[1].split('",')[0]
@@ -415,8 +413,6 @@ def snd_welcome ( message ) :
                 bot.reply_to ( message , "-----please W8 ----- " )
                 rr = requests.post(url2,data=data,headers=headers)
                 get=rr.text
-                msge=get.split('"message": "')[1].split('",')[0]
-                code=get.split('code": "')[1].split('",')[0]
                 if 'declined' or 'bank_account_declined' or 'bank_account_exists' or 'bank_account_unusable' or 'card_decline_rate_limit_exceeded'or 'card_declined' or 'charge_already_captured' or 'charge_already_refunded'or 'expired_card' or 'incorrect_cvc' or 'incorrect_number' or 'invalid_expiry_month' or 'invalid_expiry_year' or 'invalid_number' or 'lock_timeout' or 'parameter_missing' or 'payment_method_bank_account_already_verified' or 'payment_method_bank_account_blocked' or 'payment_method_invalid_parameter' or 'payment_method_unsupported_type' in get:
                     msge=get.split('"message": "')[1].split('",')[0]
                     code=get.split('code": "')[1].split('",')[0]
