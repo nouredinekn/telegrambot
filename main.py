@@ -537,7 +537,7 @@ def snd_welcome ( message ) :
                     'Authorization' : f'Bearer {sk}'
                 }
                 r0 = requests.post ( url0 , data=data0 , headers=headers ).text
-                if '"doc_url"' in r0 :
+                if '"doc_url"' in r0 and '"message": "' in r0  :
                     msge = r0.split ( '"message": "' )[1].split ( '",' )[0]
                     code=r0.split ( '"code": "' )[1].split ( '",' )[0]
                     print ( msge )
