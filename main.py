@@ -585,7 +585,7 @@ def snd_welcome ( message ) :
                         msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
                         bot.reply_to ( message , msg )
                 else:
-		    bot.reply_to ( message , "GAT OFF 1mn" )
+                    bot.reply_to( message , '<b> |-- PLEASE W8 --|</b>' )
             else:
                 y = "<b>contact @N2k4n for allwed you!</b>"
                 bot.reply_to ( message , y )
