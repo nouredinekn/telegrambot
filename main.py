@@ -489,7 +489,7 @@ def snd_welcome ( message ) :
             auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
             us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
             if '"bank":{"name":"' in r:
-                status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> VBV BIN ❌! </b>\n'
+                status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> VBV BIN ❌ </b>\n'
                 msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
                 bot.reply_to ( message , msg )
             else:
