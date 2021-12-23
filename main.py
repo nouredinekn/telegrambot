@@ -25,6 +25,7 @@ def send_welcome ( message ) :
 	/sm  -------> 𝙂𝘼𝙏 4 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 2,5＄✅</b>
 	-----------------------
 	/sk  -------> 𝘾𝙃𝙀𝘼𝙆 SK  ✅
+	/vbv  -------> 𝘾𝙃𝙀𝘼𝙆 vbv
 	/bin -------> 𝘾𝙃𝙀𝘼𝙆 𝘽𝙄𝙉
 	/id  -------> 𝙂𝙀𝙏 𝙔𝙊𝙐𝙍 𝙄𝘿
 	-----------------------
@@ -461,5 +462,40 @@ def snd_welcome ( message ) :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
 𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
 /sm  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
+	
+@bot.message_handler ( commands=['vbv'] )
+def snd_welcome ( message ) :
+    ccu = message.text
+    if True :
+        cc1 = ccu.split ( '/vbv ' )[1]
+        res = "^[0-9]+[|]+[0-9]+[|]+[0-9]+[|]+[0-9]"
+        rem = "^[0-9]"
+        tt = re.match ( res , cc1 )
+        tt2=re.match ( rem , cc1 )
+        if tt == None and tt2==None :
+            bot.reply_to ( message , '<b> YOUR FORMAT WORNG</b>\n /cc  bin' )
+        else :
+            cc = cc1[0] + cc1[1] + cc1[2] + cc1[3] + cc1[4] + cc1[5]
+            now = datetime.now ()
+            url = f'https://lookup.binlist.net/{cc1}'
+            r = requests.get ( url ).text
+            img = r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '"},' )[0].split ( '"emoji":"' )[ 1].split ('","' )[0]
+            shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚:\t' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
+            tp = '|- 𝙏𝙔𝙋𝙀:\t' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
+            lvel = '|- 𝙇𝙀𝙑𝙀𝙇:\t' + r.split ( '"brand":"' )[1].split ( '","' )[0] + '\n'
+            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔:\t' + \
+                   r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
+            date = '|-𝘿𝘼𝙏𝙀:\t' + str ( now ) + '\n'
+            auther = '𝙗𝙤𝙩𝘽𝙮 : <a herf="https://t.me/n2k4n">𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣</a>'
+            us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+            if '"bank":{"name":"' in r:
+                status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> VBV BIN ❌! </b>\n'
+                msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
+                bot.reply_to ( message , msg )
+            else:
+                status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> NON VBV  ✅</b>\n'
+                msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
+                bot.reply_to ( message , msg )
+
 bot.infinity_polling ()
 
