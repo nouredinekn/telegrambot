@@ -497,6 +497,7 @@ def snd_welcome ( message ) :
                 status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> NON VBV  ✅</b>\n'
                 msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
                 bot.reply_to ( message , msg )
+
 sk='sk_live_QH9DwaBkLy7tSSSpSAK6C0rn00SmJ7FeCA'
 @bot.message_handler ( commands=['chk'] )
 def snd_welcome ( message ) :
@@ -528,6 +529,7 @@ def snd_welcome ( message ) :
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
             auther = '𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣'
             x = str ( message.chat.id )
+	    bot.reply_to ( message , '<b> |-- PLEASE W8 --|</b>' )
             if x in li :
                 url0 = 'https://api.stripe.com/v1/tokens'
                 data0 = {
@@ -537,6 +539,7 @@ def snd_welcome ( message ) :
                     'Authorization' : f'Bearer {sk}'
                 }
                 r0 = requests.post ( url0 , data=data0 , headers=headers ).text
+		
                 if '"doc_url"' in r0 and '"message": "' in r0  :
                     msge = r0.split ( '"message": "' )[1].split ( '",' )[0]
                     code=r0.split ( '"code": "' )[1].split ( '",' )[0]
