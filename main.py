@@ -23,6 +23,7 @@ def send_welcome ( message ) :
 	/stg -------> 𝙂𝘼𝙏 2 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ １＄ ✅</b>
 	/st  -------> 𝙂𝘼𝙏 3 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 3 ✅＄</b>
 	/sm  -------> 𝙂𝘼𝙏 4 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 2,5＄✅</b>
+	/chk -------> 𝙂𝘼𝙏 5 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 0＄✅</b>
 	-----------------------
 	/sk  -------> 𝘾𝙃𝙀𝘼𝙆 SK  ✅
 	/vbv  -------> 𝘾𝙃𝙀𝘼𝙆 vbv
@@ -496,6 +497,98 @@ def snd_welcome ( message ) :
                 status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> NON VBV  ✅</b>\n'
                 msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
                 bot.reply_to ( message , msg )
-
+sk='sk_live_QH9DwaBkLy7tSSSpSAK6C0rn00SmJ7FeCA'
+@bot.message_handler ( commands=['chk'] )
+def snd_welcome ( message ) :
+    ccu = message.text
+    dd = message.text.split ( '|' )
+    cc22 = dd[0]
+    if cc22 != message.text :
+        cc1 = ccu.split ( '/chk ' )[1]
+        res = "^[0-9]+[|]+[0-9]+[|]+[0-9]+[|]+[0-9]"
+        tt = re.match ( res , cc1 )
+        if tt == None :
+            bot.reply_to ( message , '<b> YOUR FORMAT WORNG</b>\n /chk cc|ｍｍ|ｙｙ|ｃｖｖ' )
+        else :
+            yy = cc1.split ( '|' )
+            cc = yy[0]
+            mth = yy[1]
+            ye = yy[2]
+            cvv = yy[3]
+            now = datetime.now ()
+            xx = '<i>' + cc + '|' + mth + '|' + ye + '|' + cvv + '</i>' + '\n'
+            urlp=''
+            url = f'https://lookup.binlist.net/{cc}'
+            r = requests.get ( url ).text
+            img =r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '"},' )[0].split ( '"emoji":"' )[1].split (
+                '","' )[0]
+            shm = '|-𝙨𝙘𝙝𝙚𝙢𝙚: ' + r.split ( '"scheme":"' )[1].split ( '","' )[0] + '\n'
+            tp = '|- 𝙏𝙔𝙋𝙀: ' + r.split ( '"type":"' )[1].split ( '","' )[0] + '\n'
+            cont = '|- 𝘾𝙊𝙐𝙉𝙏𝙍𝙔: ' +r.split ( '"country":{"' )[1].split ( ',"name":"' )[1].split ( '","' )[0] + '\t' + img + '\n'
+            date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
+            auther = '𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣'
+            x = str ( message.chat.id )
+            if x in li :
+                url0 = 'https://api.stripe.com/v1/tokens'
+                data0 = {
+                    'card[number]' : cc , 'card[exp_month]' : mth , 'card[exp_year]' : ye , 'card[cvc]' : cvv
+                }
+                headers = {
+                    'Authorization' : f'Bearer {sk}'
+                }
+                r0 = requests.post ( url0 , data=data0 , headers=headers ).text
+                if '"doc_url"' in r0 :
+                    msge = r0.split ( '"message": "' )[1].split ( '",' )[0]
+                    code=r0.split ( '"code": "' )[1].split ( '",' )[0]
+                    print ( msge )
+                    us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+                        message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                    rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
+                    rp = '|- 𝙘𝙤𝙙𝙚: <b>' +code+ '</b>\n' + '|-𝙂𝘼T:\t' + '<b>B3</b>' + '\n'
+                    status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>DECLINED ❌</b>\n'
+                    msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
+                    bot.reply_to ( message , msg )
+                elif '"id"' in r0 :
+                    id = r0.split ( '"id": "' )[1].split ( '",' )[0]
+                    url1 = 'https://api.stripe.com/v1/customers'
+                    data1 = {
+                        "source" : id,
+                    }
+                    r1 = requests.post ( url1 , data=data1 , headers=headers ).text
+                    if  '"cvc_check": "pass"' in r1 :
+                        if '"pass"' or '"cvc_check": "pass"' in r1 :
+                            us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+                                message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                            rp = '|- 𝙘𝙤𝙙𝙚: <b>' + 'cvv_live' + '</b>\n' + '|-𝙂𝘼T:\t' + '<b>----B3----</b>' + '\n'
+                            status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> APPROVED CVV! ✅</b>\n'
+                            msg = '-𝘾𝘾 : ' + xx + status  + rp + shm + tp + cont + us + date + auther
+                            bot.reply_to ( message , msg )
+                        elif '"incorrect_cvc"' in r1 :
+                            msge = r1.split ( '"message": "' )[1].split ( '",' )[0]
+                            us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (
+                                message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                            rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
+                            rp = '|- 𝙘𝙤𝙙𝙚: <b>' + 'incorrect_cvc' + '</b>\n' + '|-𝙂𝘼T:\t' + '<b>----B3----</b>' + '\n'
+                            status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b> APPROVED CCN! ✅</b>\n'
+                            msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
+                            bot.reply_to ( message , msg )
+                    elif 'Your card has expired'or 'card_declined' or 'incorrect_number' or 'generic_decline' or 'cvc_check": "fail"' or 'invalid' or 'stolen_card'  or 'lost_card' or 'pickup_card' or  'do_not_honor' in r1:
+                        msge = r1.split ( '"message": "' )[1].split ( '",' )[0]
+                        code = r1.split ( '"code": "' )[1].split ( '",' )[0]
+                        us = '|- 𝐜𝐡𝐞𝐚𝐤𝐞𝐝𝐁𝐲:  ' + '@' + str (message.from_user.username ) + '  [𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍]' + '\n'
+                        rps = '|- 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄 ᴍꜱɢ: <b>' + msge + '</b>\n'
+                        rp = '|- 𝙘𝙤𝙙𝙚: <b>' + code + '</b>\n' + '|-𝙂𝘼T:\t' + '<b>----B3----</b>' + '\n'
+                        status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>DECLINED ❌</b>\n'
+                        msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
+                        bot.reply_to ( message , msg )
+                    else:
+                        bot.reply_to ( message , "GAT OFF 1mn" )
+            else:
+                y = "<b>contact @N2k4n for allwed you!</b>"
+                bot.reply_to ( message , y )
+    else :
+        bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
+𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
+/chk  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
 bot.infinity_polling ()
 
