@@ -529,7 +529,7 @@ def snd_welcome ( message ) :
             date = '|-𝘿𝘼𝙏𝙀: ' + str ( now ) + '\n'
             auther = '𝙗𝙤𝙩𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣'
             x = str ( message.chat.id )
-	    bot.reply_to ( message , '<b> |-- PLEASE W8 --|</b>' )
+            bot.reply_to ( message , '<b> |-- PLEASE W8 --|</b>' )
             if x in li :
                 url0 = 'https://api.stripe.com/v1/tokens'
                 data0 = {
@@ -585,7 +585,7 @@ def snd_welcome ( message ) :
                         msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
                         bot.reply_to ( message , msg )
                 else:
-                    bot.reply_to( message , '<b> |-- PLEASE W8 --|</b>' )
+                    bot.reply_to( message , '<b> |--GET OFF --|</b>' )
             else:
                 y = "<b>contact @N2k4n for allwed you!</b>"
                 bot.reply_to ( message , y )
