@@ -23,7 +23,7 @@ def send_welcome ( message ) :
 	/stg -------> 𝙂𝘼𝙏 2 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ １＄ ✅</b>
 	/st  -------> 𝙂𝘼𝙏 3 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 3 ✅＄</b>
 	/sm  -------> 𝙂𝘼𝙏 4 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 2,5＄✅</b>
-	/chk -------> 𝙂𝘼𝙏 5 <b>Ｓｔｒｉｐe Ｃｈａｒｇｅ 0＄✅</b>
+	/chk -------> 𝙂𝘼𝙏 5 <b>Ｓｔｒｉｐe customers 0$＄✅</b>
 	-----------------------
 	/sk  -------> 𝘾𝙃𝙀𝘼𝙆 SK  ✅
 	/vbv  -------> 𝘾𝙃𝙀𝘼𝙆 vbv
@@ -584,8 +584,8 @@ def snd_welcome ( message ) :
                         status = '|- 𝐒𝐓𝐀𝐓𝐔𝐒: <b>DECLINED ❌</b>\n'
                         msg = '-𝘾𝘾 : ' + xx + status + rps + rp + shm + tp + cont + us + date + auther
                         bot.reply_to ( message , msg )
-                    else:
-                        bot.reply_to ( message , "GAT OFF 1mn" )
+                else:
+		    bot.reply_to ( message , "GAT OFF 1mn" )
             else:
                 y = "<b>contact @N2k4n for allwed you!</b>"
                 bot.reply_to ( message , y )
