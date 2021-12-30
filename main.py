@@ -593,5 +593,36 @@ def snd_welcome ( message ) :
         bot.reply_to ( message , '''𝙨𝙮𝙣𝙩𝙖𝙭 𝙚𝙧𝙧𝙤𝙧
 𝙥𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙠𝙚 𝙩𝙝𝙞𝙨 𝙨𝙮𝙣𝙩𝙖𝙭 
 /chk  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
+@bot.message_handler ( commands=['fake'] )
+def snd_welcome ( message ) :
+    url = "https://randomuser.me/api?results=1&gender=&password=upper,lower,12&exc=register,picture,id&nat=US"
+    r = requests.get ( url ).text
+    print ( r )
+    first = r.split ( '"first":"' )[1].split ( '",' )[0]
+    gender = r.split ( '"gender":"' )[1].split ( '",' )[0]
+    last = r.split ( '"last":"' )[1].split ( '"},' )[0]
+    city = r.split ( '"city":"' )[1].split ( '",' )[0]
+    state = r.split ( '"state":"' )[1].split ( '",' )[0]
+    country = r.split ( '"country":"' )[1].split ( '",' )[0]
+    postcode = r.split ( '"postcode":' )[1].split ( ',' )[0]
+    email = r.split ( '"email":"' )[1].split ( '",' )[0]
+    password = r.split ( '"password":"' )[1].split ( '",' )[0]
+    phone = r.split ( '"phone":"' )[1].split ( '",' )[0]
+    info = f'''✅ 𝙄𝙣𝙛𝙤 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙
+     ━━━━━━━━━━━━━━━
+    🤡𝙛𝙪𝙡𝙡𝙉𝙖𝙢𝙚: {last}  {first}
+    😈𝐠𝐞𝐧𝐝𝐞𝐫: {gender}
+    🌏𝐜𝐨𝐮𝐧𝐭𝐫𝐲: {country}
+    🏙️𝐜𝐢𝐭𝐲: {city}
+    ⭐𝐬𝐭𝐚𝐭𝐞: {state}
+    📢𝐩𝐨𝐬𝐭𝐜𝐨𝐝𝐞: {postcode}
+    📩𝐞𝐦𝐚𝐢𝐥: {email}
+    🔑𝐩𝐚𝐬𝐬𝐰𝐨𝐫𝐝: {password}
+    📞𝐩𝐡𝐨𝐧𝐞: {phone}
+    ━━━━━━━━━━━━━━━
+    𝘽𝙤𝙩𝘿𝙚𝙫𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣
+    @N2K4N
+    '''
+    bot.reply_to(message,info)
 bot.infinity_polling ()
 
