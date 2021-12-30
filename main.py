@@ -596,9 +596,7 @@ def snd_welcome ( message ) :
 /chk  ｃｃ|ｍｍ|ｙｙ|ｃｖｖ ''' )
 @bot.message_handler ( commands=['fake'] )
 def snd_welcome ( message ) :
-    kt=message.text.split('/fake ')[1]
-    x='nat=us'+str(kt)
-    url = "https://randomuser.me/api?results=1&gender=&password=upper,lower,12&exc=register,picture,id&nat=us".replace('nat=us',x)
+    url = "https://randomuser.me/api?results=1&gender=&password=upper,lower,12&exc=register,picture,id&nat=us"
     r = requests.get ( url ).text
     first = r.split ( '"first":"' )[1].split ( '",' )[0]
     gender = r.split ( '"gender":"' )[1].split ( '",' )[0]
