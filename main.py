@@ -6,7 +6,7 @@ import requests
 
 tk = "5091216962:AAFH8KuDUek9SJ04LHz8d_r0cOdFrfgWL6o"
 bot = telebot.TeleBot ( tk , parse_mode='HTML' )
-li = ['1935904246','1364932886','2073666868','1398180872','2078688611','1687593507','1578353400','1867035313','1747485543','1313363938' ,'-1001460339254', '2019913786','-1001264846206','1392822505','5089982781','1066023678','1369203062','1904810925','1220994613','-1001226749661','1558927049','831085795','1795743504','-1001568809654','1857834467','1000127017']
+li = ['1935904246','-1001221829347','1364932886','2073666868','1398180872','2078688611','1687593507','1578353400','1867035313','1747485543','1313363938' ,'-1001460339254', '2019913786','-1001264846206','1392822505','5089982781','1066023678','1369203062','1904810925','1220994613','-1001226749661','1558927049','831085795','1795743504','-1001568809654','1857834467','1000127017']
 
 
 @bot.message_handler ( commands=['start' , 'help'] )
@@ -499,7 +499,7 @@ def snd_welcome ( message ) :
                 msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
                 bot.reply_to ( message , msg )
 
-sk='sk_live_QH9DwaBkLy7tSSSpSAK6C0rn00SmJ7FeCA'
+sk='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'
 @bot.message_handler ( commands=['chk'] )
 def snd_welcome ( message ) :
     ccu = message.text
