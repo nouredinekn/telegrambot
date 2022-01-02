@@ -499,7 +499,7 @@ def snd_welcome ( message ) :
                 msg = '|-BIN :\t<b>' +cc +'</b>\n' +status+ shm + tp + lvel + cont+us + date + auther
                 bot.reply_to ( message , msg )
 
-sk='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'
+sk="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"
 @bot.message_handler ( commands=['chk'] )
 def snd_welcome ( message ) :
     ccu = message.text
