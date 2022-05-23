@@ -621,7 +621,7 @@ def snd_welcome ( message ) :
     📞𝐩𝐡𝐨𝐧𝐞: {phone}
     ━━━━━━━━━━━━━━━
     𝘽𝙤𝙩𝘿𝙚𝙫𝘽𝙮 : 𝙣𝙤𝙪𝙧𝙚𝙙𝙞𝙣𝙚𝙆𝙣
-    @N2K4N
+    |@N2K4N|
     '''
     bot.reply_to(message,info)
 bot.infinity_polling ()
